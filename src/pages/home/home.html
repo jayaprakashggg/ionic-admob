@@ -1,14 +1,47 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary" class="common-header">
     <ion-title>
-      Ionic Blank
+      Ionic AdMob
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <p>AdMob banner view</p>
+  <ion-row>
+    <ion-col>
+      <button ion-button color="secondary" (click)="onClickBannerShow();" block>Show</button>
+    </ion-col>
+    <ion-col>
+      <button ion-button color="danger" (click)="onClickBannerHide();" block>Hide</button>
+    </ion-col>
+  </ion-row>
+  <div class="border_line"></div>
+  <p>AdMob interstitial view</p>
+  <ion-row>
+    <ion-col>
+      <button ion-button color="secondary" (click)="onClickInterstitialShow();" block>Show</button>
+    </ion-col>
+  </ion-row>
+  <div class="border_line"></div>
+  <p>AdMob rewarded view</p>
+  <ion-row>
+    <ion-col>
+      <button ion-button color="secondary" (click)="onClickRewardedShow();" block>Show</button>
+    </ion-col>
+  </ion-row>
+  <div class="border_line"></div>
+  <p>AdMob banner view2</p>
+  <ion-row>
+    <ion-col>
+      <button ion-button color="secondary" (click)="onClickBannerShow2();" block>Show</button>
+    </ion-col>
+    <ion-col>
+      <button ion-button color="danger" (click)="onClickBannerHide2();" block>Hide</button>
+    </ion-col>
+    <ion-col>
+      <button ion-button color="info" (click)="onClickBannerRemove2();" block>Remove</button>
+    </ion-col>
+  </ion-row>
+  <div class="border_line"></div>
 </ion-content>
