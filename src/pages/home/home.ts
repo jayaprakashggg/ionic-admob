@@ -12,17 +12,17 @@ const config: AdMobFreeBannerConfig = {
 };
 const bannerConfig: AdMobFreeBannerConfig = {
   id: "ca-app-pub-7830018553893784/6731471022",
-  isTesting: true,
+  isTesting: false,
   autoShow: true
 };
 const interstitialConfig: AdMobFreeInterstitialConfig = {
   id: "ca-app-pub-7830018553893784/9485626870",
-  isTesting: true,
+  isTesting: false,
   autoShow: true
 };
 const rewardVideoConfig: AdMobFreeRewardVideoConfig = {
   id: "ca-app-pub-7830018553893784/7983529866",
-  isTesting: true,
+  isTesting: false,
   autoShow: true
 };
 
@@ -61,7 +61,14 @@ export class HomePage {
     });
   }
 
-  onClickBannerHide() {}
+  onClickBannerHide() {
+    this.adMobFree.banner
+      .show()
+      .then(() => {
+        console.log("bannerShow");
+      })
+      .catch(e => console.log(e));
+  }
 
   onClickInterstitialShow() {
     this.platform.ready().then(readySource => {
